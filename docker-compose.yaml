@@ -10,3 +10,4 @@ services:
     restart: always
     volumes:
       - $HOME/.ssh:/root/.ssh
+      - $HOME/.gitconfig:/root/.gitconfig
