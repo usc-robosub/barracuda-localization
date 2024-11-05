@@ -1,0 +1,3 @@
+[submodule "catkin_ws/src/robot_localization"]
+	path = catkin_ws/src/robot_localization
+	url = git@github.com:cra-ros-pkg/robot_localization.git

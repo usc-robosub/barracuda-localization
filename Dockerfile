@@ -4,7 +4,7 @@ COPY . /opt/barracuda-localization
 
 WORKDIR /opt
 
-RUN apt-get update && apt-get install -y \
+RUN apt-get update && apt-get install -y git \
     && rm -rf /var/lib/apt/lists/*
 
 CMD ["/bin/bash", "/opt/barracuda-localization/entrypoint.sh"]
