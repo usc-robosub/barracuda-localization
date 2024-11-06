@@ -6,6 +6,6 @@ cd barracuda-localization/catkin_ws
 catkin_make
 source devel/setup.bash
 
-# roslaunch barracuda_localization barracuda_localization.launch
+roslaunch barracuda_localization barracuda_localization.launch
 
-exec tail -f /dev/null
+# exec tail -f /dev/null
