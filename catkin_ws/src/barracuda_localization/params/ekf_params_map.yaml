@@ -137,7 +137,7 @@ odom1_pose_rejection_threshold: 2
 odom1_twist_rejection_threshold: 0.2
 odom1_nodelay: false
 
-twist0: barracuda/dvl/twist
+twist0: dvl/twist
 twist0_config: [false, false, false,
                 false, false, false,
                 true,  true,  true,
