@@ -2,12 +2,14 @@
   <!-- Create an instance of ekf_localization_node to create the /barracuda/odom to /barracuda/base_link transform -->
   <node pkg="robot_localization" type="ekf_localization_node" name="ekf_se_odom" clear_params="true" ns="barracuda" respawn="true">
     <rosparam command="load" file="$(find barracuda_localization)/params/ekf_params_odom.yaml" />
+    <remap from="odometry/filtered" to="odometry/filtered/local" />
+    <remap from="accel/filtered" to="accel_map/filtered/local" />
   </node>
   <!-- Create an instance of ekf_localization_node to create the /map to /barracuda/odom transform -->
   <node pkg="robot_localization" type="ekf_localization_node" name="ekf_se_map" clear_params="true" ns="barracuda" respawn="true">
     <rosparam command="load" file="$(find barracuda_localization)/params/ekf_params_map.yaml" />
-    <remap from="odometry/filtered" to="odometry_map/filtered" />
-    <remap from="accel/filtered" to="accel_map/filtered" />
+    <remap from="odometry/filtered" to="odometry/filtered/global" />
+    <remap from="accel/filtered" to="accel_map/filtered/global" />
   </node>
 
 </launch>
