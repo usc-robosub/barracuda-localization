@@ -65,9 +65,9 @@ permit_corrected_publication: false
 #     3b. MAKE SURE something else is generating the odom->base_link transform. Note that this can even be another state
 #         estimation node from robot_localization! However, that instance should *not* fuse the global data.
 map_frame: map              # Defaults to "map" if unspecified
-odom_frame: barracuda/odom            # Defaults to "odom" if unspecified
-base_link_frame: barracuda/base_link  # Defaults to "base_link" if unspecified
-world_frame: barracuda/odom           # Defaults to the value of odom_frame if unspecified
+odom_frame: barracuda_odom            # Defaults to "odom" if unspecified
+base_link_frame: barracuda_base_link  # Defaults to "base_link" if unspecified
+world_frame: barracuda_odom           # Defaults to the value of odom_frame if unspecified
 
 # The filter accepts an arbitrary number of inputs from each input message type (nav_msgs/Odometry,
 # geometry_msgs/PoseWithCovarianceStamped, geometry_msgs/TwistWithCovarianceStamped,
@@ -149,7 +149,7 @@ pose0_queue_size: 5
 pose0_rejection_threshold: 2  # Note the difference in parameter name
 pose0_nodelay: false
 
-twist0: dvl/twist
+twist0: dvl_twist
 twist0_config: [false, false, false,
                 false, false, false,
                 true,  true,  true,
